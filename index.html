@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
-    
+
     <style>
         body {
             background-color: #000;
@@ -19,7 +19,7 @@
             padding: 0;
             position: relative;
             z-index: 1;
-            font-weight: 400; /* Se cambió de 300 a 400 para todo el texto */
+            font-weight: 400;
         }
 
         img {
@@ -51,7 +51,7 @@
             width: 22%;
             margin-bottom: 3%;
         }
-        
+
         .contact-info-blocks {
             display: flex;
             justify-content: space-between;
@@ -84,7 +84,7 @@
             font-size: 1rem;
             margin: 5px 0;
         }
-        
+
         .info-text .cotiza-title {
             font-weight: 400;
         }
@@ -98,7 +98,7 @@
         .info-text .couriers a:hover {
             text-decoration: none;
         }
-        
+
         .info-text .stock {
             color: #990000;
             font-weight: 400;
@@ -120,26 +120,28 @@
         .product-item p {
             font-size: 0.9rem;
             margin: 5px 0;
-            font-weight: 400; /* Se cambió de 300 a 400 */
+            font-weight: 400;
         }
 
         .product-item .tallas {
             color: #990000;
-            font-weight: 400;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 11px;     /* <--- Aumentado de 8px a 10px */
         }
-        
+
         /* --- Sección "Acerca de" y Transición de blanco a negro --- */
         .about-section {
             text-align: center;
             padding: 0 20%;
             line-height: 1.5;
-            font-weight: 400; /* Se cambió de 300 a 400 */
+            font-weight: 400;
         }
 
         .about-section .about-text {
             color: #888;
         }
-        
+
         .about-section .social-icons {
             margin-top: 20px;
         }
@@ -152,7 +154,7 @@
             width: 40px;
             margin: 0 10px;
         }
-        
+
         /* --- Transición de negro a blanco --- */
         .black-to-white-transition {
             background-color: #000;
@@ -174,11 +176,11 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .white-background-section a {
             color: #000;
         }
-        
+
         /* --- Sección de fondo negro (acerca de) --- */
         .black-background-section {
             background-color: #000;
@@ -222,14 +224,14 @@
 
     <div class="main-info-container">
         <div class="header-images">
-            <img class="logo" src="fotos/logo.png" alt="logo">
-            <img class="poleras-image" src="fotos/poleras.png" alt="poleras">
+            <img class="logo" src="fotos/logo.png" alt="Logo de Macabrxstore">
+            <img class="poleras-image" src="fotos/poleras.png" alt="Título de la sección de poleras">
         </div>
-        
+
         <div class="contact-info-blocks">
             <div class="info-block">
                 <a href="https://wa.me/56935369789?text=Hola%2C%20estoy%20interesadx%20en%20una%20cotizacion" target="_blank">
-                    <img src="fotos/whatsapp.png" alt="whatsApp">
+                    <img src="fotos/whatsapp.png" alt="Logo de WhatsApp para cotizar envíos">
                 </a>
                 <div class="info-text">
                     <p class="cotiza-title">Cotiza tu envío aquí</p>
@@ -239,14 +241,14 @@
                     <p>Datos remitente: Independencia 15x15x15 cm, 1kg</p>
                 </div>
             </div>
-            
+
             <div class="info-block info-prices">
-                <img src="fotos/precios.png" alt="precios">
+                <img src="fotos/precios.png" alt="Imagen con lista de precios de poleras">
             </div>
 
             <div class="info-block">
                 <a href="https://instagram.com/macabrxstore" target="_blank">
-                    <img src="fotos/instagram.png" alt="instagram">
+                    <img src="fotos/instagram.png" alt="Logo de Instagram para seguir a macabrxstore">
                 </a>
                 <div class="info-text">
                     <p>Entrega en metro a convenir por $2.000</p>
@@ -256,98 +258,98 @@
             </div>
         </div>
     </div>
-    
+
     <div class="black-to-white-transition"></div>
 
     <div class="white-background-section">
         <div class="product-grid">
             <div class="product-item">
-                <img src="fotos/Poleras/Burzum.png" alt="Burzum">
+                <img src="fotos/Poleras/Burzum.png" alt="Polera de Burzum Filosofem">
                 <p>Burzum<br>Filosofem</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Cannibal Corpse.png" alt="Cannibal Corpse">
+                <img src="fotos/Poleras/Cannibal Corpse.png" alt="Polera de Cannibal Corpse con diseño de esqueleto y logo">
                 <p>Cannibal Corpse</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Cannibal Corpse(1).png" alt="Cannibal Corpse">
+                <img src="fotos/Poleras/Cannibal Corpse(1).png" alt="Polera de Cannibal Corpse Global Evisceration">
                 <p>Cannibal Corpse<br>Global Evisceration</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Guns N_ Roses.png" alt="Guns N' Roses">
+                <img src="fotos/Poleras/Guns N_ Roses.png" alt="Polera de Guns N' Roses">
                 <p>Guns N' Roses</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Iron Maiden.png" alt="Iron Maiden">
+                <img src="fotos/Poleras/Iron Maiden.png" alt="Polera de Iron Maiden con Eddie y logo">
                 <p>Iron Maiden</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Iron Maiden(1).png" alt="Iron Maiden">
+                <img src="fotos/Poleras/Iron Maiden(1).png" alt="Polera de Iron Maiden Somewhere Back in Time">
                 <p>Iron Maiden<br>Somewhere Back in Time</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Kiss.png" alt="Kiss">
+                <img src="fotos/Poleras/Kiss.png" alt="Polera de Kiss">
                 <p>Kiss</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Lacrimosa.png" alt="Lacrimosa">
+                <img src="fotos/Poleras/Lacrimosa.png" alt="Polera de Lacrimosa Lichtgestalt">
                 <p>Lacrimosa<br>Lichtgestalt</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Led Zeppelin.png" alt="Led Zeppelin">
+                <img src="fotos/Poleras/Led Zeppelin.png" alt="Polera de Led Zeppelin">
                 <p>Led Zeppelin</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Megadeth.png" alt="Megadeth">
+                <img src="fotos/Poleras/Megadeth.png" alt="Polera de Megadeth">
                 <p>Megadeth</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Misfits.png" alt="Misfits">
+                <img src="fotos/Poleras/Misfits.png" alt="Polera de Misfits con logo del cráneo">
                 <p>Misfits</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Motorhead.png" alt="Motörhead">
+                <img src="fotos/Poleras/Motorhead.png" alt="Polera de Motörhead">
                 <p>Motörhead</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/My Chemical Romance.png" alt="My Chemical Romance">
+                <img src="fotos/Poleras/My Chemical Romance.png" alt="Polera de My Chemical Romance The Black Parade Is Dead!">
                 <p>My Chemical Romance<br>The Black Parade Is Dead!</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/My Chemical Romance(1).png" alt="My Chemical Romance">
+                <img src="fotos/Poleras/My Chemical Romance(1).png" alt="Polera de My Chemical Romance Three Cheers for Sweet Revenge">
                 <p>My Chemical Romance<br>Three Cheers for Sweet Revenge</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Pantera.png" alt="Pantera">
+                <img src="fotos/Poleras/Pantera.png" alt="Polera de Pantera">
                 <p>Pantera</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Rammstein.png" alt="Rammstein">
+                <img src="fotos/Poleras/Rammstein.png" alt="Polera de Rammstein Sehnsucht">
                 <p>Rammstein<br>Sehnsucht</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Slayer.png" alt="Slayer">
+                <img src="fotos/Poleras/Slayer.png" alt="Polera de Slayer">
                 <p>Slayer</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/The Rolling Stones.png" alt="The Rolling Stones">
+                <img src="fotos/Poleras/The Rolling Stones.png" alt="Polera de The Rolling Stones">
                 <p>The Rolling Stones</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
@@ -369,10 +371,10 @@
             </p>
             <div class="social-icons">
                 <a href="https://wa.me/56935369789" target="_blank">
-                    <img src="fotos/whatsapp.png" alt="WhatsApp">
+                    <img src="fotos/whatsapp.png" alt="Ícono de WhatsApp">
                 </a>
                 <a href="https://instagram.com/macabrxstore" target="_blank">
-                    <img src="fotos/instagram.png" alt="Instagram">
+                    <img src="fotos/instagram.png" alt="Ícono de Instagram">
                 </a>
             </div>
         </div>
