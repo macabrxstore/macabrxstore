@@ -1,0 +1,46 @@
+/* -------------------------------
+   Cargar fuente Lexend - Latin Extended
+---------------------------------*/
+
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lexend/v25/wlpwgwvFAVdoq2_v9aQU4Wc.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* -------------------------------
+   Estilos generales de la página
+---------------------------------*/
+
+body {
+  background-color: #000000; /* fondo negro */
+  color: #ffffff;            /* texto blanco */
+  font-family: 'Lexend', sans-serif; /* usar Lexend */
+  font-size: 12px;           /* tamaño de fuente 12px */
+  margin: 20px;              /* margen default */
+  line-height: 1.6;          /* espaciado legible */
+}
+
+/* Encabezados */
+h1, h2, h3 {
+  color: #ffffff;
+}
+
+/* Párrafos */
+p {
+  color: #ffffff;
+}
+
+/* Botones */
+button {
+  background-color: #ffffff; /* fondo blanco */
+  color: #000000;            /* texto negro */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;       /* bordes redondeados */
+  cursor: pointer;
+  font-size: 12px;           /* mismo tamaño que el texto de la página */
+}
