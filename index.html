@@ -1,40 +1,381 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>macabrxstore</title>
-  <link rel="icon" type="image/icon" href="fotos/icono.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>macabrxstore</title>
+    <link rel="icon" type="image/icon" href="fotos/icono.png">
 
-  <!-- Conecta archivo CSS personalizado -->
-  <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Lexend', sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            z-index: 1;
+            font-weight: 400; /* Se cambió de 300 a 400 para todo el texto */
+        }
 
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* --- Contenedor principal de la sección superior --- */
+        .main-info-container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 10%;
+            box-sizing: border-box;
+        }
+
+        .header-images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+        }
+
+        .header-images .logo {
+            width: 40%;
+            margin-bottom: 7%;
+        }
+
+        .header-images .poleras-image {
+            width: 22%;
+            margin-bottom: 3%;
+        }
+        
+        .contact-info-blocks {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .info-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-basis: 35%;
+        }
+
+        .info-block img {
+            width: 150px;
+        }
+
+        .info-block.info-prices {
+            flex-basis: 25%;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+
+        .info-block .info-text {
+            margin-top: 20px;
+        }
+
+        .info-text p, .info-text span {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        
+        .info-text .cotiza-title {
+            font-weight: 400;
+        }
+
+        .info-text .couriers a {
+            color: #990000;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .info-text .couriers a:hover {
+            text-decoration: none;
+        }
+        
+        .info-text .stock {
+            color: #990000;
+            font-weight: 400;
+        }
+
+        /* --- Estilos para la cuadrícula de productos --- */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 50px;
+            padding: 0 10%;
+        }
+
+        .product-item {
+            text-align: center;
+        }
+
+        .product-item p {
+            font-size: 0.9rem;
+            margin: 5px 0;
+            font-weight: 400; /* Se cambió de 300 a 400 */
+        }
+
+        .product-item .tallas {
+            color: #990000;
+            font-weight: 400;
+        }
+        
+        /* --- Sección "Acerca de" y Transición de blanco a negro --- */
+        .about-section {
+            text-align: center;
+            padding: 0 20%;
+            line-height: 1.5;
+            font-weight: 400; /* Se cambió de 300 a 400 */
+        }
+
+        .about-section .about-text {
+            color: #888;
+        }
+        
+        .about-section .social-icons {
+            margin-top: 20px;
+        }
+
+        .about-section .social-icons a {
+            text-decoration: none;
+        }
+
+        .about-section .social-icons img {
+            width: 40px;
+            margin: 0 10px;
+        }
+        
+        /* --- Transición de negro a blanco --- */
+        .black-to-white-transition {
+            background-color: #000;
+            color: #fff;
+            background-image: url('fotos/transición negro a blanco.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 150px;
+            background-position: center bottom;
+            height: 150px;
+            margin: 50px 0 0;
+        }
+
+        /* --- Sección de fondo blanco (poleras) --- */
+        .white-background-section {
+            background-color: #fff;
+            color: #000;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .white-background-section a {
+            color: #000;
+        }
+        
+        /* --- Sección de fondo negro (acerca de) --- */
+        .black-background-section {
+            background-color: #000;
+            color: #fff;
+            padding-top: 150px;
+            padding-bottom: 100px;
+            background-image: url('fotos/transición blanco a negro.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 150px;
+            background-position: center top;
+        }
+
+        /* === Media Queries para hacerlo responsivo === */
+        @media (max-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 5%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contact-info-blocks {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+                padding: 0 2%;
+            }
+            .info-block {
+                margin-bottom: 30px;
+            }
+            .main-info-container {
+                padding: 0 5%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <img src="fotos/logo.png" alt="logo" style="display: block; margin: 0 auto 7%;" width="40%">
-  <img src="fotos/poleras.png" alt="poleras" style="display: block; margin: 0 auto 3%;" width="22%">
-  
-<div style="display: flex; align-items: center; justify-content: center; gap: 20%; width: 80%; margin: 0 auto;">
+    <div class="main-info-container">
+        <div class="header-images">
+            <img class="logo" src="fotos/logo.png" alt="logo">
+            <img class="poleras-image" src="fotos/poleras.png" alt="poleras">
+        </div>
+        
+        <div class="contact-info-blocks">
+            <div class="info-block">
+                <a href="https://wa.me/56935369789?text=Hola%2C%20estoy%20interesadx%20en%20una%20cotizacion" target="_blank">
+                    <img src="fotos/whatsapp.png" alt="whatsApp">
+                </a>
+                <div class="info-text">
+                    <p class="cotiza-title">Cotiza tu envío aquí</p>
+                    <div>
+                        <span class="couriers">(<a href="https://www.blue.cl/emprendedores/plataforma-emprendedores#cotizadorEmprendedores" target="_blank">Blue express</a>, <a href="https://www.correos.cl/cotizador" target="_blank">Correos de Chile</a>, y <a href="https://starken.cl/cotizador" target="_blank">Starken</a>)</span>
+                    </div>
+                    <p>Datos remitente: Independencia 15x15x15 cm, 1kg</p>
+                </div>
+            </div>
+            
+            <div class="info-block info-prices">
+                <img src="fotos/precios.png" alt="precios">
+            </div>
 
-  <!-- Icono WhatsApp a la izquierda -->
-  <a href="https://wa.me/56935369789?text=Hola%2C%20estoy%20interesadx%20en" target="_blank" style="flex: 0 0 15%;">
-    <img src="fotos/whatsapp.png" alt="whatsApp" style="width: 100%; height: auto;">
-  </a>
+            <div class="info-block">
+                <a href="https://instagram.com/macabrxstore" target="_blank">
+                    <img src="fotos/instagram.png" alt="instagram">
+                </a>
+                <div class="info-text">
+                    <p>Entrega en metro a convenir por $2.000</p>
+                    <p>Pago a través de efectivo o transferencia <span style="font-size: 1.2rem;">✨</span></p>
+                    <p class="stock">Stock ordenado alfabéticamente</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="black-to-white-transition"></div>
 
-  <!-- Imagen central -->
-  <div style="flex: 0 0 20%;">
-    <img src="fotos/precios.png" alt="precios" style="width: 100%; height: auto;">
-  </div>
+    <div class="white-background-section">
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="fotos/mychemicalromance.jpg" alt="My Chemical Romance">
+                <p>My Chemical Romance<br>The Black Parade Is Dead!</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/mychemicalromance2.jpg" alt="My Chemical Romance">
+                <p>My Chemical Romance<br>Three Cheers for Sweet<br>Revenge</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/pantera.jpg" alt="Pantera">
+                <p>Pantera</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/rammstein.jpg" alt="Rammstein">
+                <p>Rammstein<br>Sehnsucht</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/burzum.jpg" alt="Burzum">
+                <p>Burzum</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/cannibalcorpse.jpg" alt="Cannibal Corpse">
+                <p>Cannibal Corpse</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/cannibalcorpse2.jpg" alt="Cannibal Corpse">
+                <p>Cannibal Corpse</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/gunsnroses.jpg" alt="Guns N' Roses">
+                <p>Guns N' Roses</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/ironmaiden.jpg" alt="Iron Maiden">
+                <p>Iron Maiden</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/ironmaiden2.jpg" alt="Iron Maiden">
+                <p>Iron Maiden<br>Somewhere Back in Time</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/kiss.jpg" alt="Kiss">
+                <p>Kiss<br>Lichtgestalt</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/lacrimosa.jpg" alt="Lacrimosa">
+                <p>Lacrimosa<br>Lichtgestalt</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/ledzeppelin.jpg" alt="Led Zeppelin">
+                <p>Led Zeppelin</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/megadeth.jpg" alt="Megadeth">
+                <p>Megadeth</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/misfits.jpg" alt="Misfits">
+                <p>Misfits</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/motorhead.jpg" alt="Motörhead">
+                <p>Motörhead</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/slayer.jpg" alt="Slayer">
+                <p>Slayer</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+            <div class="product-item">
+                <img src="fotos/therollingstones.jpg" alt="The Rolling Stones">
+                <p>The Rolling Stones</p>
+                <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+            </div>
+        </div>
+    </div>
 
-  <!-- Icono Instagram a la derecha -->
-  <a href="https://instagram.com/macabrxstore" target="_blank" style="flex: 0 0 15%;">
-    <img src="fotos/instagram.png" alt="instagram" style="width: 100%; height: auto;">
-  </a>
-
-</div>
-
-
+    <div class="black-background-section">
+        <div class="about-section">
+            <p class="about-text">
+                Este proyecto nació ante la falta de recursos para financiar mi carrera<br>
+                universitaria. Al ser una carrera extremadamente demandante de tiempo,<br>
+                no me será posible ejercer en un trabajo formal que me brinde la<br>
+                cantidad necesaria para solventarlo mientras la curso.
+            </p>
+            <p class="about-text">
+                Cada compra que realizas es un gran aporte y la agradezco<br>
+                profundamente. También me ayudas mucho compartiendo esta página<br>
+                para que más personas la conozcan.
+            </p>
+            <div class="social-icons">
+                <a href="https://wa.me/56935369789" target="_blank">
+                    <img src="fotos/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://instagram.com/macabrxstore" target="_blank">
+                    <img src="fotos/instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

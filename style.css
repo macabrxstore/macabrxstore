@@ -1,46 +1,36 @@
-/* -------------------------------
-   Cargar fuente Lexend - Latin Extended
----------------------------------*/
+/*
+ * Asegúrate de que la fuente Lexend esté importada con un peso alto.
+ * Por ejemplo, con 700 o 800.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap');
 
-@font-face {
-  font-family: 'Lexend';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lexend/v25/wlpwgwvFAVdoq2_v9aQU4Wc.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+/* El resto de tus estilos CSS van aquí */
+
+.info-envio-cotiza h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: 700; /* Hace que el texto sea más grueso */
 }
 
-/* -------------------------------
-   Estilos generales de la página
----------------------------------*/
-
-body {
-  background-color: #000000; /* fondo negro */
-  color: #ffffff;            /* texto blanco */
-  font-family: 'Lexend', sans-serif; /* usar Lexend */
-  font-size: 12px;           /* tamaño de fuente 12px */
-  margin: 20px;              /* margen default */
-  line-height: 1.6;          /* espaciado legible */
+/* El resto de tus estilos */
+.info-envio-cotiza, .info-envio-entrega {
+    text-align: center;
+    margin: 20px;
+    max-width: 400px;
 }
-
-/* Encabezados */
-h1, h2, h3 {
-  color: #ffffff;
+.info-envio-cotiza p, .info-envio-entrega p {
+    font-size: 1rem;
+    margin: 5px 0;
 }
-
-/* Párrafos */
-p {
-  color: #ffffff;
+.info-envio-cotiza .couriers a {
+    color: red;
+    font-weight: 700; /* Asegúrate de que los enlaces sean gruesos */
+    text-decoration: none;
 }
-
-/* Botones */
-button {
-  background-color: #ffffff; /* fondo blanco */
-  color: #000000;            /* texto negro */
-  border: none;
-  padding: 12px 20px;
-  border-radius: 12px;       /* bordes redondeados */
-  cursor: pointer;
-  font-size: 12px;           /* mismo tamaño que el texto de la página */
+.info-envio-cotiza .couriers a:hover {
+    text-decoration: underline;
+}
+.info-envio-entrega .stock {
+    color: red;
+    font-weight: 700; /* Aplica negrita a este texto también */
 }
