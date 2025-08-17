@@ -102,6 +102,7 @@
         .info-text .stock {
             color: #990000;
             font-weight: 400;
+            font-size: 1.2rem;
         }
 
         /* --- Estilos para la cuadrícula de productos --- */
@@ -127,7 +128,17 @@
             color: #990000;
             font-weight: bold;
             font-style: italic;
-            font-size: 11px;     /* <--- El tamaño de la fuente se ajustó a 11px */
+            font-size: 11px;
+        }
+
+        /* Efecto de agrandamiento al pasar el mouse */
+        .product-item img {
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .product-item img:hover {
+            transform: scale(1.20);
         }
 
         /* --- Sección "Acerca de" y Transición de blanco a negro --- */
@@ -224,14 +235,14 @@
 
     <div class="main-info-container">
         <div class="header-images">
-            <img class="logo" src="fotos/logo.png" alt="Logo de Macabrxstore">
-            <img class="poleras-image" src="fotos/poleras.png" alt="Título de la sección de poleras">
+            <img class="logo" src="fotos/logo.png" alt="Logo de Macabrxstore" />
+            <img class="poleras-image" src="fotos/poleras.png" alt="Título de la sección de poleras" />
         </div>
 
         <div class="contact-info-blocks">
             <div class="info-block">
                 <a href="https://wa.me/56935369789?text=Hola%2C%20estoy%20interesadx%20en%20una%20cotizacion" target="_blank">
-                    <img src="fotos/whatsapp.png" alt="Logo de WhatsApp para cotizar envíos">
+                    <img src="fotos/whatsapp.png" alt="Logo de WhatsApp para cotizar envíos" />
                 </a>
                 <div class="info-text">
                     <p class="cotiza-title">Cotiza tu envío aquí</p>
@@ -243,16 +254,16 @@
             </div>
 
             <div class="info-block info-prices">
-                <img src="fotos/precios.png" alt="Imagen con lista de precios de poleras">
+                <img src="fotos/precios.png" alt="Imagen con lista de precios de poleras" />
             </div>
 
             <div class="info-block">
                 <a href="https://instagram.com/macabrxstore" target="_blank">
-                    <img src="fotos/instagram.png" alt="Logo de Instagram para seguir a macabrxstore">
+                    <img src="fotos/instagram.png" alt="Logo de Instagram para seguir a macabrxstore" />
                 </a>
                 <div class="info-text">
                     <p>Entrega en metro a convenir por $2.000</p>
-                    <p>Pago a través de efectivo o transferencia <span style="font-size: 1.2rem;">✨</span></p>
+                    <p>Pago a través de efectivo o transferencia <span style="font-size: 1.2rem;">𖤐</span></p>
                     <p class="stock">Stock ordenado alfabéticamente</p>
                 </div>
             </div>
@@ -264,92 +275,92 @@
     <div class="white-background-section">
         <div class="product-grid">
             <div class="product-item">
-                <img src="fotos/Poleras/Burzum.png" alt="Polera de Burzum Filosofem">
+                <img src="fotos/Poleras/Burzum.png" alt="Polera de Burzum Filosofem" />
                 <p>Burzum<br>Filosofem</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Cannibal Corpse.png" alt="Polera de Cannibal Corpse con diseño de esqueleto y logo">
+                <img src="fotos/Poleras/Cannibal Corpse.png" alt="Polera de Cannibal Corpse con diseño de esqueleto y logo" />
                 <p>Cannibal Corpse</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Cannibal Corpse(1).png" alt="Polera de Cannibal Corpse Global Evisceration">
+                <img src="fotos/Poleras/Cannibal Corpse(1).png" alt="Polera de Cannibal Corpse Global Evisceration" />
                 <p>Cannibal Corpse<br>Global Evisceration</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Guns N_ Roses.png" alt="Polera de Guns N' Roses">
+                <img src="fotos/Poleras/Guns N_ Roses.png" alt="Polera de Guns N' Roses" />
                 <p>Guns N' Roses</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Iron Maiden.png" alt="Polera de Iron Maiden con Eddie y logo">
+                <img src="fotos/Poleras/Iron Maiden.png" alt="Polera de Iron Maiden con Eddie y logo" />
                 <p>Iron Maiden</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Iron Maiden(1).png" alt="Polera de Iron Maiden Somewhere Back in Time">
+                <img src="fotos/Poleras/Iron Maiden(1).png" alt="Polera de Iron Maiden Somewhere Back in Time" />
                 <p>Iron Maiden<br>Somewhere Back in Time</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Kiss.png" alt="Polera de Kiss">
+                <img src="fotos/Poleras/Kiss.png" alt="Polera de Kiss" />
                 <p>Kiss</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Lacrimosa.png" alt="Polera de Lacrimosa Lichtgestalt">
+                <img src="fotos/Poleras/Lacrimosa.png" alt="Polera de Lacrimosa Lichtgestalt" />
                 <p>Lacrimosa<br>Lichtgestalt</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Led Zeppelin.png" alt="Polera de Led Zeppelin">
+                <img src="fotos/Poleras/Led Zeppelin.png" alt="Polera de Led Zeppelin" />
                 <p>Led Zeppelin</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Megadeth.png" alt="Polera de Megadeth">
+                <img src="fotos/Poleras/Megadeth.png" alt="Polera de Megadeth" />
                 <p>Megadeth</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Misfits.png" alt="Polera de Misfits con logo del cráneo">
+                <img src="fotos/Poleras/Misfits.png" alt="Polera de Misfits con logo del cráneo" />
                 <p>Misfits</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Motorhead.png" alt="Polera de Motörhead">
+                <img src="fotos/Poleras/Motorhead.png" alt="Polera de Motörhead" />
                 <p>Motörhead</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/My Chemical Romance.png" alt="Polera de My Chemical Romance The Black Parade Is Dead!">
+                <img src="fotos/Poleras/My Chemical Romance.png" alt="Polera de My Chemical Romance The Black Parade Is Dead!" />
                 <p>My Chemical Romance<br>The Black Parade Is Dead!</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/My Chemical Romance(1).png" alt="Polera de My Chemical Romance Three Cheers for Sweet Revenge">
+                <img src="fotos/Poleras/My Chemical Romance(1).png" alt="Polera de My Chemical Romance Three Cheers for Sweet Revenge" />
                 <p>My Chemical Romance<br>Three Cheers for Sweet Revenge</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Pantera.png" alt="Polera de Pantera">
+                <img src="fotos/Poleras/Pantera.png" alt="Polera de Pantera" />
                 <p>Pantera</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Rammstein.png" alt="Polera de Rammstein Sehnsucht">
+                <img src="fotos/Poleras/Rammstein.png" alt="Polera de Rammstein Sehnsucht" />
                 <p>Rammstein<br>Sehnsucht</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Slayer.png" alt="Polera de Slayer">
+                <img src="fotos/Poleras/Slayer.png" alt="Polera de Slayer" />
                 <p>Slayer</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/The Rolling Stones.png" alt="Polera de The Rolling Stones">
+                <img src="fotos/Poleras/The Rolling Stones.png" alt="Polera de The Rolling Stones" />
                 <p>The Rolling Stones</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
             </div>
@@ -365,10 +376,10 @@
             </p>
             <div class="social-icons">
                 <a href="https://wa.me/56935369789" target="_blank">
-                    <img src="fotos/whatsapp.png" alt="Ícono de WhatsApp">
+                    <img src="fotos/whatsapp.png" alt="Ícono de WhatsApp" />
                 </a>
                 <a href="https://instagram.com/macabrxstore" target="_blank">
-                    <img src="fotos/instagram.png" alt="Ícono de Instagram">
+                    <img src="fotos/instagram.png" alt="Ícono de Instagram" />
                 </a>
             </div>
         </div>
