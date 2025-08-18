@@ -1,26 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Seleccionamos el contenedor y todos los productos
+    // Código para ordenar los productos
     const productGrid = document.getElementById('product-grid');
     const products = Array.from(productGrid.children);
 
-    // Ordenamos los productos alfabéticamente
     products.sort((a, b) => {
-        // Obtenemos el texto del nombre del producto (el primer <p>) y lo normalizamos
         const nameA = a.querySelector('p').textContent.toLowerCase().trim();
         const nameB = b.querySelector('p').textContent.toLowerCase().trim();
         
-        // Hacemos la comparación alfabética
         if (nameA < nameB) {
             return -1;
         }
         if (nameA > nameB) {
             return 1;
         }
-        return 0; // Si son iguales, no hay cambio de orden
+        return 0;
     });
 
-    // Reemplazamos los productos en el contenedor con la lista ordenada
     products.forEach(product => {
         productGrid.appendChild(product);
+    });
+
+    // --- Código para el zoom de las imágenes ---
+    const productImages = document.querySelectorAll('.product-item img');
+
+    productImages.forEach(img => {
+        img.addEventListener('click', () => {
+            if (img.style.transform === 'scale(1.2)') {
+                img.style.transform = 'scale(1)';
+                img.style.zIndex = '1';
+            } else {
+                img.style.transform = 'scale(1.2)';
+                img.style.zIndex = '10';
+            }
+        });
     });
 });
