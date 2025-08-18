@@ -229,7 +229,23 @@
         .buy-button:hover {
             background-color: #b20000;
         }
+        
+        /* --- Botón para la categoría "Otros" --- */
+        .otros-button-container {
+            text-align: center;
+            padding: 40px 0;
+        }
 
+        .otros-button-container img {
+            width: 10%; /* Puedes ajustar el tamaño aquí */
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .otros-button-container img:hover {
+            transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
+        }
+        
         /* === Media Queries para hacerlo responsivo === */
         @media (max-width: 1024px) {
             .product-grid {
@@ -264,6 +280,10 @@
             }
             .contact-info-blocks .info-prices img {
                 width: 30%;
+            }
+            /* Ajuste de tamaño para el botón de poleras en móviles */
+            .otros-button-container img {
+                width: 150px;
             }
         }
     </style>
@@ -302,6 +322,12 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="otros-button-container">
+        <a href="https://macabrxstore.github.io/otros/">
+            <img src="fotos/otros.png" alt="Botón para la categoría 'Otros'" />
+        </a>
     </div>
 
     <div class="black-to-white-transition"></div>
