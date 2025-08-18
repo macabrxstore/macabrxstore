@@ -66,14 +66,13 @@
             flex-basis: 35%;
         }
 
-        .info-block img {
-            width: 150px;
+        /* Clase para el nuevo contenedor de la parte superior */
+        .info-block.info-prices {
+            flex-basis: 100%;
         }
 
-        .info-block.info-prices {
-            flex-basis: 25%;
-            flex-shrink: 0;
-            flex-grow: 0;
+        .info-block img {
+            width: 150px;
         }
 
         .info-block .info-text {
@@ -97,6 +96,18 @@
 
         .info-text .couriers a:hover {
             text-decoration: none;
+        }
+
+        .contact-details-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 30px;
+        }
+        
+        /* Oculta los iconos dentro de contact-details-container */
+        .contact-details-container .info-block img {
+            display: none;
         }
 
         /* --- Estilos para la cuadrícula de productos --- */
@@ -212,13 +223,13 @@
             font-size: 1rem;
             margin-top: 10px;
             text-decoration: none;
-            border-radius: 5px; /* Esquinas redondeadas */
+            border-radius: 5px;
         }
 
         .buy-button:hover {
-            background-color: #b20000; /* Un rojo un poco más claro para el efecto hover */
+            background-color: #b20000;
         }
-        
+
         /* === Media Queries para hacerlo responsivo === */
         @media (max-width: 1024px) {
             .product-grid {
@@ -228,7 +239,7 @@
         }
 
         @media (max-width: 600px) {
-            .contact-info-blocks {
+            .contact-info-blocks, .contact-details-container {
                 flex-direction: column;
                 align-items: center;
             }
@@ -255,10 +266,13 @@
         </div>
 
         <div class="contact-info-blocks">
+            <div class="info-block info-prices">
+                <img src="fotos/precios.png" alt="Imagen con lista de precios de poleras" />
+            </div>
+        </div>
+
+        <div class="contact-details-container">
             <div class="info-block">
-                <a href="https://wa.me/56935369789?text=Hola%2C%20estoy%20interesadx%20en%20una%20cotizacion" target="_blank">
-                    <img src="fotos/whatsapp.png" alt="Logo de WhatsApp para cotizar envíos" />
-                </a>
                 <div class="info-text">
                     <p class="cotiza-title">Cotiza tu envío aquí</p>
                     <div>
@@ -268,14 +282,7 @@
                 </div>
             </div>
 
-            <div class="info-block info-prices">
-                <img src="fotos/precios.png" alt="Imagen con lista de precios de poleras" />
-            </div>
-
             <div class="info-block">
-                <a href="https://instagram.com/macabrxstore" target="_blank">
-                    <img src="fotos/instagram.png" alt="Logo de Instagram para seguir a macabrxstore" />
-                </a>
                 <div class="info-text">
                     <p>Entrega en metro a convenir por $2.000</p>
                     <p>Pago a través de efectivo o transferencia <span style="font-size: 1.2rem;">𖤐</span></p>
