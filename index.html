@@ -99,12 +99,6 @@
             text-decoration: none;
         }
 
-        .info-text .stock {
-            color: #990000;
-            font-weight: 400;
-            font-size: 1.2rem;
-        }
-
         /* --- Estilos para la cuadrícula de productos --- */
         .product-grid {
             display: grid;
@@ -116,6 +110,9 @@
 
         .product-item {
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .product-item p {
@@ -204,6 +201,24 @@
             background-position: center top;
         }
 
+        /* Estilo del botón de compra */
+        .buy-button {
+            background-color: #990000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Lexend', sans-serif;
+            font-size: 1rem;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 5px; /* Esquinas redondeadas */
+        }
+
+        .buy-button:hover {
+            background-color: #b20000; /* Un rojo un poco más claro para el efecto hover */
+        }
+        
         /* === Media Queries para hacerlo responsivo === */
         @media (max-width: 1024px) {
             .product-grid {
@@ -264,7 +279,7 @@
                 <div class="info-text">
                     <p>Entrega en metro a convenir por $2.000</p>
                     <p>Pago a través de efectivo o transferencia <span style="font-size: 1.2rem;">𖤐</span></p>
-                    <p class="stock">Stock ordenado alfabéticamente</p>
+                    <p>Stock ordenado alfabéticamente</p>
                 </div>
             </div>
         </div>
@@ -273,96 +288,186 @@
     <div class="black-to-white-transition"></div>
 
     <div class="white-background-section">
-        <div class="product-grid">
+        <div class="product-grid" id="product-grid">
             <div class="product-item">
-                <img src="fotos/Poleras/Burzum.png" alt="Polera de Burzum Filosofem" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Burzum%20Filosofem.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Burzum.png" alt="Polera de Burzum Filosofem" />
+                </a>
                 <p>Burzum<br>Filosofem</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Burzum%20Filosofem.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Cannibal Corpse.png" alt="Polera de Cannibal Corpse con diseño de esqueleto y logo" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Cannibal%20Corpse.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Cannibal Corpse.png" alt="Polera de Cannibal Corpse con diseño de esqueleto y logo" />
+                </a>
                 <p>Cannibal Corpse</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Cannibal%20Corpse.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Cannibal Corpse(1).png" alt="Polera de Cannibal Corpse Global Evisceration" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Cannibal%20Corpse%20Global%20Evisceration.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Cannibal Corpse(1).png" alt="Polera de Cannibal Corpse Global Evisceration" />
+                </a>
                 <p>Cannibal Corpse<br>Global Evisceration</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Cannibal%20Corpse%20Global%20Evisceration.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Guns N_ Roses.png" alt="Polera de Guns N' Roses" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Guns%20N'%20Roses.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Guns N_ Roses.png" alt="Polera de Guns N' Roses" />
+                </a>
                 <p>Guns N' Roses</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Guns%20N'%20Roses.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Iron Maiden.png" alt="Polera de Iron Maiden con Eddie y logo" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Iron%20Maiden.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Iron Maiden.png" alt="Polera de Iron Maiden con Eddie y logo" />
+                </a>
                 <p>Iron Maiden</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Iron%20Maiden.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Iron Maiden(1).png" alt="Polera de Iron Maiden Somewhere Back in Time" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Iron%20Maiden%20Somewhere%20Back%20in%20Time.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Iron Maiden(1).png" alt="Polera de Iron Maiden Somewhere Back in Time" />
+                </a>
                 <p>Iron Maiden<br>Somewhere Back in Time</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Iron%20Maiden%20Somewhere%20Back%20in%20Time.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Kiss.png" alt="Polera de Kiss" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Kiss.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Kiss.png" alt="Polera de Kiss" />
+                </a>
                 <p>Kiss</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Kiss.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Lacrimosa.png" alt="Polera de Lacrimosa Lichtgestalt" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Lacrimosa%20Lichtgestalt.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Lacrimosa.png" alt="Polera de Lacrimosa Lichtgestalt" />
+                </a>
                 <p>Lacrimosa<br>Lichtgestalt</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Lacrimosa%20Lichtgestalt.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Led Zeppelin.png" alt="Polera de Led Zeppelin" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Led%20Zeppelin.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Led Zeppelin.png" alt="Polera de Led Zeppelin" />
+                </a>
                 <p>Led Zeppelin</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Led%20Zeppelin.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Megadeth.png" alt="Polera de Megadeth" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Megadeth.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Megadeth.png" alt="Polera de Megadeth" />
+                </a>
                 <p>Megadeth</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Megadeth.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Misfits.png" alt="Polera de Misfits con logo del cráneo" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Misfits.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Misfits.png" alt="Polera de Misfits con logo del cráneo" />
+                </a>
                 <p>Misfits</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Misfits.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Motorhead.png" alt="Polera de Motörhead" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Motorhead.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Motorhead.png" alt="Polera de Motörhead" />
+                </a>
                 <p>Motörhead</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Motorhead.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/My Chemical Romance.png" alt="Polera de My Chemical Romance The Black Parade Is Dead!" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20My%20Chemical%20Romance%20The%20Black%20Parade%20Is%20Dead!.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/My Chemical Romance.png" alt="Polera de My Chemical Romance The Black Parade Is Dead!" />
+                </a>
                 <p>My Chemical Romance<br>The Black Parade Is Dead!</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20My%20Chemical%20Romance%20The%20Black%20Parade%20Is%20Dead!.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/My Chemical Romance(1).png" alt="Polera de My Chemical Romance Three Cheers for Sweet Revenge" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20My%20Chemical%20Romance%20Three%20Cheers%20for%20Sweet%20Revenge.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/My Chemical Romance(1).png" alt="Polera de My Chemical Romance Three Cheers for Sweet Revenge" />
+                </a>
                 <p>My Chemical Romance<br>Three Cheers for Sweet Revenge</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20My%20Chemical%20Romance%20Three%20Cheers%20for%20Sweet%20Revenge.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Pantera.png" alt="Polera de Pantera" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Pantera.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Pantera.png" alt="Polera de Pantera" />
+                </a>
                 <p>Pantera</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Pantera.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Rammstein.png" alt="Polera de Rammstein Sehnsucht" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Rammstein%20Sehnsucht.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Rammstein.png" alt="Polera de Rammstein Sehnsucht" />
+                </a>
                 <p>Rammstein<br>Sehnsucht</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Rammstein%20Sehnsucht.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/Slayer.png" alt="Polera de Slayer" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Slayer.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/Slayer.png" alt="Polera de Slayer" />
+                </a>
                 <p>Slayer</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20Slayer.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
             <div class="product-item">
-                <img src="fotos/Poleras/The Rolling Stones.png" alt="Polera de The Rolling Stones" />
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20The%20Rolling%20Stones.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <img src="fotos/Poleras/The Rolling Stones.png" alt="Polera de The Rolling Stones" />
+                </a>
                 <p>The Rolling Stones</p>
                 <p class="tallas">Tallas a pedido - consulta disponibilidad</p>
+                <a href="https://wa.me/56935369789?text=Hola%2C%20me%20interesa%20la%20polera%20de%20The%20Rolling%20Stones.%20%C2%BFLa%20tienes%20disponible%3F" target="_blank" style="text-decoration: none;">
+                    <button class="buy-button">Consultar</button>
+                </a>
             </div>
         </div>
     </div>
@@ -384,5 +489,7 @@
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
