@@ -218,6 +218,31 @@
         .buy-button:hover {
             background-color: #b20000; /* Un rojo un poco más claro para el efecto hover */
         }
+        
+        /* === Media Queries para hacerlo responsivo === */
+        @media (max-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 5%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contact-info-blocks {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+                padding: 0 2%;
+            }
+            .info-block {
+                margin-bottom: 30px;
+            }
+            .main-info-container {
+                padding: 0 5%;
+            }
+        }
     </style>
 </head>
 
